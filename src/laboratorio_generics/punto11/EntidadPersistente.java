@@ -1,0 +1,21 @@
+package laboratorio_generics.punto11;
+
+/**
+ * Almacena un valor numérico comparable y permite compararlo con otro del mismo tipo.
+ */
+public class EntidadPersistente<T extends Number & Comparable<T>> {
+
+    private final T valor;
+
+    public EntidadPersistente(T valor) {
+        this.valor = valor;
+    }
+
+    public int compararCon(T otro) {
+        return valor.compareTo(otro);
+    }
+
+    public T getValor() {
+        return valor;
+    }
+}
