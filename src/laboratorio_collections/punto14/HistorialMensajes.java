@@ -16,10 +16,22 @@ public class HistorialMensajes {
         mensajes = new ArrayDeque<>();
     }
 
+    /**
+     * Agrega un mensaje al final del historial.
+     *
+     * @param mensaje texto que se desea guardar
+     */
     public void agregarMensaje(String mensaje) {
         mensajes.addLast(mensaje);
     }
 
+    /**
+     * Recorre el deque desde el final para tomar como máximo los diez mensajes
+     * más recientes. Se insertan al inicio de la lista resultado para conservar
+     * el orden en que fueron enviados.
+     *
+     * @return lista con los últimos diez mensajes, o menos si no existen diez
+     */
     public List<String> obtenerUltimosDiez() {
         List<String> ultimos = new ArrayList<>();
         Iterator<String> iterator = mensajes.descendingIterator();

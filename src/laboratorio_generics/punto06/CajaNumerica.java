@@ -11,6 +11,11 @@ public class CajaNumerica<T extends Number> {
         this.numero = numero;
     }
 
+    /**
+     * Convierte el número almacenado a double y multiplica su valor por dos.
+     *
+     * @return doble del número guardado
+     */
     public double doble() {
         return numero.doubleValue() * 2;
     }

@@ -7,6 +7,12 @@ import java.util.List;
  */
 public class Ordenador<T extends Comparable<T>> {
 
+    /**
+     * Ordena la lista de menor a mayor con un ordenamiento burbuja. En cada pasada
+     * compara dos elementos vecinos con compareTo y los intercambia si están al revés.
+     *
+     * @param lista lista que se desea ordenar
+     */
     public void ordenar(List<T> lista) {
         for (int i = 0; i < lista.size() - 1; i++) {
             for (int j = 0; j < lista.size() - 1 - i; j++) {

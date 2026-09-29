@@ -20,7 +20,13 @@ public class CatalogoCursos {
         cursos.add(curso);
     }
 
-    /** Busca cursos de un año utilizando únicamente Iterator. */
+    /**
+     * Busca los cursos que pertenecen al año indicado. El recorrido se hace con
+     * Iterator, como lo pide el ejercicio, y los encontrados se guardan aparte.
+     *
+     * @param anioBuscado año que se quiere consultar
+     * @return lista con los cursos encontrados en ese año
+     */
     public List<Curso> buscarPorAnio(int anioBuscado) {
         List<Curso> resultado = new ArrayList<>();
         Iterator<Curso> iterator = cursos.iterator();
@@ -36,6 +42,10 @@ public class CatalogoCursos {
         return resultado;
     }
 
+    /**
+     * Ordena el catálogo usando el código de cada curso como criterio.
+     * El Comparator permite tener este orden sin cambiar la clase Curso.
+     */
     public void ordenarPorCodigo() {
         Comparator<Curso> comparadorCodigo = new Comparator<Curso>() {
             @Override

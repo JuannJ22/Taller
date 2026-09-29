@@ -13,10 +13,19 @@ public class CancionesFavoritas {
         canciones = new LinkedHashSet<>();
     }
 
+    /**
+     * Agrega una canción a favoritos. Si ya existe, LinkedHashSet no la repite.
+     *
+     * @param cancion nombre de la canción
+     * @return true si se agregó y false si ya estaba guardada
+     */
     public boolean agregarCancion(String cancion) {
         return canciones.add(cancion);
     }
 
+    /**
+     * Muestra las canciones en el mismo orden en que fueron agregadas.
+     */
     public void mostrarCanciones() {
         for (String cancion : canciones) {
             System.out.println(cancion);

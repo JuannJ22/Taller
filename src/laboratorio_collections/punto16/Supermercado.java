@@ -14,10 +14,22 @@ public class Supermercado {
         productos = new LinkedHashMap<>();
     }
 
+    /**
+     * Registra un producto junto con su precio. LinkedHashMap conserva el orden
+     * en que los productos fueron ingresados.
+     *
+     * @param producto nombre del producto
+     * @param precio precio registrado
+     */
     public void registrarProducto(String producto, double precio) {
         productos.put(producto, precio);
     }
 
+    /**
+     * Recorre todos los precios almacenados y obtiene el valor total de la compra.
+     *
+     * @return suma de los precios registrados
+     */
     public double calcularTotal() {
         double total = 0;
 

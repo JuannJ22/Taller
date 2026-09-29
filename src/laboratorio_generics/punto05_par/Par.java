@@ -13,6 +13,12 @@ public class Par<T> {
         this.valor2 = valor2;
     }
 
+    /**
+     * Compara los dos valores guardados. También contempla el caso en que alguno
+     * de los valores sea null.
+     *
+     * @return true cuando ambos valores son iguales
+     */
     public boolean sonIguales() {
         if (valor1 == null) {
             return valor2 == null;

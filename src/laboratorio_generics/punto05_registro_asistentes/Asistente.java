@@ -21,6 +21,12 @@ public class Asistente implements Comparable<Asistente> {
         return nombre;
     }
 
+    /**
+     * Define el orden natural de los asistentes usando el número de documento.
+     *
+     * @param otro asistente con el que se hace la comparación
+     * @return valor negativo, cero o positivo según el resultado de la comparación
+     */
     @Override
     public int compareTo(Asistente otro) {
         return this.documento.compareTo(otro.documento);

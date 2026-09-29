@@ -21,7 +21,13 @@ public class RegistroAsistentes {
         asistentes.add(asistente);
     }
 
-    /** Filtra por la letra inicial del nombre usando únicamente Iterator. */
+    /**
+     * Recorre los asistentes con Iterator y guarda los que empiezan por la letra
+     * recibida. La comparación no diferencia entre mayúsculas y minúsculas.
+     *
+     * @param letra inicial que se quiere buscar
+     * @return asistentes cuyo nombre comienza por esa letra
+     */
     public List<Asistente> filtrarPorLetra(char letra) {
         List<Asistente> resultado = new ArrayList<>();
         Iterator<Asistente> iterator = asistentes.iterator();
@@ -39,6 +45,10 @@ public class RegistroAsistentes {
         return resultado;
     }
 
+    /**
+     * Ordena los asistentes por nombre usando un Comparator independiente del
+     * orden natural por documento definido en Asistente.
+     */
     public void ordenarPorNombre() {
         Comparator<Asistente> comparadorNombre = new Comparator<Asistente>() {
             @Override

@@ -11,6 +11,12 @@ public class EntidadPersistente<T extends Number & Comparable<T>> {
         this.valor = valor;
     }
 
+    /**
+     * Compara el valor almacenado con otro valor del mismo tipo usando compareTo.
+     *
+     * @param otro valor con el que se quiere comparar
+     * @return negativo si es menor, cero si son iguales o positivo si es mayor
+     */
     public int compararCon(T otro) {
         return valor.compareTo(otro);
     }

@@ -9,6 +9,15 @@ package laboratorio_generics.punto07;
  */
 public class App {
 
+    /**
+     * Suma dos valores numéricos. La restricción Number permite usar doubleValue()
+     * sin importar si llegan Integer, Double u otro tipo numérico.
+     *
+     * @param a primer número
+     * @param b segundo número
+     * @param <T> tipo numérico recibido
+     * @return suma de ambos valores como double
+     */
     public static <T extends Number> double sumar(T a, T b) {
         return a.doubleValue() + b.doubleValue();
     }
